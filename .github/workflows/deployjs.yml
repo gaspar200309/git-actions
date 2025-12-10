@@ -31,5 +31,5 @@ jobs:
     - name: Installing Surge
       run: npm i --global surge
     - name: deploy to surge
-      run: surge ./dist http://standing-oranges.surge.sh/ --token 71dfb28394ed8a98e6de7e5ec048a7c8
+      run: surge ./dist ${{vars.URL}} --token ${{secrets.SURGE_TOKEN}}
     #- run: npm test
